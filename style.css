@@ -12,6 +12,7 @@
     --surface-color: rgba(255, 255, 255,0.05);
     --surface-color-cover: rgba(255, 255, 255, 0.05);
     --highlight-color: rgba(255, 255, 255, 0.2);
+    --switch-button: url(./assets/button-icon.svg);
 }
 
 .light{
@@ -21,7 +22,7 @@
     --surface-color: rgba(0,0,0,0.05);
     --surface-color-cover: rgba(0, 0, 0, 0.02);
     --highlight-color: rgba(0, 0, 0, 0.1);
-
+    --switch-button: url(./assets/button-icon-sun.svg);
 }
 body{
     background:  var(--bg-url-mobile) no-repeat top center/cover;
@@ -34,7 +35,6 @@ body * {
 
 #container{
     width: 360px;
-    border: 1px solid red;
     margin: 56px auto auto auto;
 }
 
@@ -53,6 +53,42 @@ body * {
     font-weight: 400;
     line-height: 24px;
     margin-top: 8px;
+}
+
+
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-button) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
 }
 
 ul{
