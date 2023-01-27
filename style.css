@@ -35,3 +35,37 @@ body * {
     line-height: 24px;
     margin-top: 8px;
 }
+
+ul{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+
+ul li a{
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+
+    transition: background .5s;
+}
+
+ul li a:hover{
+    border: 1.5px solid #FFFFFF;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
