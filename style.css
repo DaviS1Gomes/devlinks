@@ -71,15 +71,21 @@ body * {
     border: 0;
     border-radius: 50%;
     position: absolute;
-    left: 0;
     z-index: 1;
     top:50%;
+    left: 0;
     transform: translateY(-50%);
+    animation: slide-back .2s;
 }
 
+
+
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-in .2s forwards;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span{
@@ -157,5 +163,23 @@ ul li a:hover{
     }
     .light{
         --bg-url-mobile: url(./assets/interface-desktop-light.jpg);
+    }
+}
+
+@keyframes slide-in {
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
     }
 }
