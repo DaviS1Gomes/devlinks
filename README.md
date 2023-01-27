@@ -1,7 +1,7 @@
 <h1 align="center"> DevLinks </h1>
 
 <p align="center">
-Esse foi um projeto feito por mim, com intuito de estudar promovido gratuitamente pela Rocketseat <br/>
+Esse foi um projeto feito por mim, com intuito de estudar. Promovido gratuitamente pela Rocketseat <br/>
 
 </p>
 
